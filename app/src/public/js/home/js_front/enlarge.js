@@ -40,9 +40,8 @@ let enlargeBOX = document.getElementById('enlargeBox');
 let workerSelect = localStorage.getItem("workerSelect")
 let selectIndex = localStorage.getItem("selectIndex")
 
-enlargeIMG.src = `profile/${workerSelect}.jpg`;
-enlargeIMG.onerror = function(){this.src = "profile/account.png"}; // image 없을 시 기본 이미지 출력
-
+enlargeIMG.src = `js/home/profile/${workerSelect}.jpg`;
+enlargeIMG.onerror = function(){this.src = "js/home/profile/account.png"}; // image 없을 시 기본 이미지 출력
 updateEnlarge()
 
 function updateEnlarge() {

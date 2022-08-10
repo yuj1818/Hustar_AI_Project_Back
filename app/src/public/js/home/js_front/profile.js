@@ -81,6 +81,6 @@ function newpage() {
     localStorage.setItem("workerSelect",workerSelect);
     localStorage.setItem("selectIndex",selectIndex);
 
-    const link = 'enlarge.html';
-    window.open(link,'vucket',"width=800, height=600");
+    //const link = 'enlarge.html';
+    window.open('/enlarge','vucket',"width=800, height=600");
 }

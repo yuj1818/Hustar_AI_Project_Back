@@ -10,6 +10,22 @@ const output={
   login:(req, res) =>{
     res.render("home/login");
   },
+
+  register:(req, res) =>{
+    res.render("home/register");
+  },
+
+  video1:(req, res) =>{
+    res.render("home/video1");
+  },
+
+  video2:(req, res) =>{
+    res.render("home/video2");
+  },
+
+  enlarge:(req, res) =>{
+    res.render("home/enlarge");
+  }
 };
 
 
