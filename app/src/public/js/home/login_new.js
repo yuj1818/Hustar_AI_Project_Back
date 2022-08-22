@@ -29,7 +29,8 @@ function onLoginSubmit(event){  //추후에 DB연결해서 관리자 테이블 �
                 location.href ="/";
             }
         }else{
-        alert(res.msg);
+            if(res.err) return alert(res.err);
+            alert(res.msg);
         }
     }).catch((err)=>{
         console.error("로그인 중 에러 발생");

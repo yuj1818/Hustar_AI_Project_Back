@@ -30,15 +30,15 @@ const output={
 
 // login.js의 fetch()에서 POST하는 데이터를 받아 오는 부분
 const process={//web화면에서 id와 pw에 입력한 데이터 받아옴
-  login:(req,res)=>{ 
+  login: async (req,res)=>{ 
     const user = new User(req.body);
-    const response = user.login();
+    const response = await user.login();
     return res.json(response);
   },
 
-  register:(req,res)=>{ 
+  register: async (req,res)=>{ 
     const user = new User(req.body);
-    const response = user.register();
+    const response = await user.register();
     return res.json(response);
   },
 };
