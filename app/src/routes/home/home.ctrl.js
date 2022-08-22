@@ -25,6 +25,10 @@ const output={
 
   enlarge:(req, res) =>{
     res.render("home/enlarge");
+  },
+
+  warning_log : (req, res) =>{
+      res.render("home/warning_log");
   }
 };
 

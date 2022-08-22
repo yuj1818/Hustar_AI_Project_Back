@@ -15,6 +15,7 @@ router.post("/register", ctrl.process.register);
 router.get("/video1",ctrl.output.video1);
 router.get("/video2",ctrl.output.video2);
 router.get("/enlarge",ctrl.output.enlarge);
+router.get("/warning_log",ctrl.output.warning_log);
 
 //router를 외부파일에서 사용할 수 있도록 던져주는 부분
 module.exports = router;

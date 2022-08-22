@@ -17,7 +17,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href=" ">Human Intelligence</a>
+            <a class="navbar-brand ps-3" href="/">Human Intelligence</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -43,7 +43,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Index</div>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/">
                                 <div class="sb-nav-link-icon"><i class="fas fa-desktop me-1"></i></div>
                                 Dashboard
                             </a>
@@ -55,7 +55,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href='/video1'>webcam1</a>
+                                    <a class="nav-link" href="/video1">webcam1</a>
                                     <a class="nav-link" href="/video2">webcam2</a>
                                     <a class="nav-link" href="/warning_log">Warning Log</a>
                                 </nav>
@@ -74,24 +74,24 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Warning Log</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">현장 맞춤형 안전관리 모니터링 시스템</li>
+                            <li class="breadcrumb-item active"></li>
                         </ol>
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-6" style="display : none;">
                                 <div class="card mb-4">
                                     <div class="card-header" style="height: 45.3px">
                                         <i class="fas fa-chart-bar me-1"></i>
                                         CCTV 영상
                                     </div>
                                     <div class="card-body" >
-                                        <video  id="myVideo" width="50%" height="270" style="border: 1px solid #ddd; float:left;" onClick="location.href='/video1'"></video>
-                                        <video  id="myVideo2" width="50%" height="270" style="border: 1px solid #ddd; float:right;" onClick="location.href='/video2'"></video>
+                                        <video  id="myVideo" width="50%" height="270" style="border: 1px solid #ddd; float:left;" onClick="location.href='video1.html'"></video>
+                                        <video  id="myVideo2" width="50%" height="270" style="border: 1px solid #ddd; float:right;" onClick="location.href='video2.html'"></video>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-6" style="display : none;">
                                 <div class="card mb-4" id="cardMinWidth">
                                     <div class="card-header" >
                                         <i class="fas fa-address-book me-1"></i>
@@ -108,39 +108,30 @@
                                 </div>
                             </div>
                             <div class="col-xl-12">
-                                    
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-exclamation-triangle me-1"></i>
-                                            Warning Log
-                                    </div>
-                                    <div class="card-body">
-                                        <table id="datatablesSimple">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Phone</th>
-                                                    <th>Warning Log</th>
-                                                    <th>Date</th>
-                                                    <th>Age</th>
-                                                    <th>Remarks</th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Phone</th>
-                                                    <th>Warning Log</th>
-                                                    <th>Date</th>
-                                                    <th>Age</th>
-                                                    <th>Remarks</th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody id="log_input">
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Warning Log</th>
+                                            <th>Date</th>
+                                            <th>Age</th>
+                                            <th>Remarks</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>Warning Log</th>
+                                            <th>Date</th>
+                                            <th>Age</th>
+                                            <th>Remarks</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody id="log_input">
+                                    </tbody>
+                                </table>    
                             </div>
                         </div>
                     </div>
@@ -164,7 +155,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="/js/home/js_front/logtable.js"></script>
-        <script src="/js/home/js_front/video.js"></script>
         <script src="/js/home/js_front/lightCtrl.js"></script>
         <script src="/js/home/js_front/dataUpdate.js"></script>
     </body>

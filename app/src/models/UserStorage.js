@@ -42,15 +42,15 @@ class UserStorage{
     });
   }
 
-  static checkUserInfo(id){
-    const query = "SELECT * FROM user WHERE id = ?;"
-    db.query(query, [id], (err, data) => {
-      if(data.length > 0){
-        return 1;
-      }else{
-        return 0;
-      }
-    })
+  static async checkUserInfo(id){
+    return new Promise((resolve, reject) => {
+      const query = "SELECT * FROM user WHERE id = ?;"
+      db.query(query, [id], (err, data) => {
+        if(err) reject('${err}');
+        else if(data.length>0) resolve(1);
+        else resolve(0);
+      });
+    });
   }
   static async save(userInfo){
     return new Promise((resolve, reject) => {

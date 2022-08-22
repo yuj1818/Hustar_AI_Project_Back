@@ -33,10 +33,11 @@ class User{
     async register(){
         const client = this.body;
         try{
-            if(UserStorage.checkUserInfo(client.id)){
+            console.log(await UserStorage.checkUserInfo(client.id));
+            if(await UserStorage.checkUserInfo(client.id)){
                 return {success: false, msg: "이미 존재하는 아이디입니다"};
             }else{
-                const response = UserStorage.save(client);
+                const response = await UserStorage.save(client);
                 return response;
             }
         } catch(err){
