@@ -14,7 +14,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/">현장 맞춤형 안전관리 모니터링 시스템</a>
+            <a class="navbar-brand ps-3" href="/">Human Intelligence</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 menuloc" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -51,7 +51,10 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        admin
+                        <script>
+                            let workerSelect = localStorage.getItem("loggedID");
+                            document.write(workerSelect);
+                        </script>
                     </div>
                 </nav>
             </div>
